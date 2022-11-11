@@ -1,0 +1,132 @@
+*{
+    font-size: 1.2rem;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  html, body {
+    background-color: rgb(88, 164, 235);
+    height: 50vh;
+  }
+  
+  .container {
+    display: flex;
+    padding: 1.2rem;
+    justify-content:space-between;
+    flex-direction: column;
+    border-top-left-radius: 3rem;
+    border-top-right-radius: 3rem;
+    background-color: rgb(255, 255, 255);
+    height: 26rem;
+    align-items: center;
+    margin-top: 10rem;
+    width: 100%;
+    max-width: 600px;
+    position: absolute;
+    align-content: flex-end;
+    top: 16rem;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  
+  }
+  .container .psw{
+    border-radius: 10px;
+    padding: 11px 10px;
+    color: black;
+    border: none;
+    background-color: #E4E4E49E;
+  }
+  .container .inicio{
+    border-radius: 10px;
+    padding: 10px 10px; 
+    color: black;
+    border: none;
+    background-color: #E4E4E49E;
+  }
+  
+  .logo {
+    display: flex;
+    height: auto;
+    width: auto;
+    justify-content: center;
+    margin-top: 2rem;
+    filter: brightness(0) invert(1);
+  
+  }
+  
+  .abajo {
+    height: 60vh;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50px 50px 0 0;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .abajo h1 {
+    font-size: 1.0rem;
+    font-family: Arial, Helvetica, sans-serif;
+  
+  }
+  
+  /*.container .contrasenia {
+    display: block;
+    height: 50px;   
+    width: 50%;
+    padding-left: 10px;
+    color: rgb(250, 245, 245);
+    border: 1px solid #fff;
+    border-radius: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(170, 165, 165);
+    font-size: 1.4rem;
+    outline: none;
+  }*/
+  
+  .abajo input::placeholder {
+    color: rgb(71, 66, 66);
+  }
+  
+  .container .login {
+    background-color: rgb(88, 164, 235);
+    padding: 13px 5rem; 
+    border-radius: 1rem;
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+    border: none;
+  }
+  
+  /* .container .cuenta {
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+    bottom: 2.5rem; */
+  
+  
+  /* .abajo .crear{
+    position: absolute;
+    bottom: 1.5rem; */
+  
+  
+   .container h2 {
+      color: rgb(71, 66, 66);
+      font-size: 0.8rem;
+  }
+  /*.jugo h1{
+    display: flex;
+    justify-content: center;
+    margin-top: 15%;
+    color: #ffff;
+    font-family: montserrat, ´bold italic´;
+    font-size: 2rem;
+  }*/
+  
+  .jugo h2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+    color: #ffff;
+    font-size: 1.5rem;
+  }
