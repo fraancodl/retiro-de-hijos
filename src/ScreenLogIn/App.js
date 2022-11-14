@@ -25,30 +25,36 @@ function App() {
   const getData = () => {
     let id = getCookie("LoggedId")
 
-    fetch ("http://localhost:5001/estacionamiento/ordenar", {
-      method:"POST",
+    let token = "token="+id;
+    console.log(token);
+
+    const data = fetch ("http://localhost:5001/estacionamiento/ordenar/", {
+      method:"GET",
       mode:"cors",
-      headers:{
-        "Content-Type": "application/json"
+      credentials: "include",
+      headers:{ 
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify(id)
-    })  
+      // body: JSON.stringify(id)
+    })
     .then((response) => {
-      setData(response);
-      console.log(response);
-      return response.text();
+      return response.json()
+    })
+    .then((res) => {
+      console.log(res);
+      setData(res);
+      return res.text();
       
     })
-    .then((data) => {
-    })
+    return data
   }
 
   useEffect(() => {
-    getData();
-    console.log(data);
+    let lol = getData();
+    console.log(lol);
   },[]);
 
-  // getData()
+  console.log(getData())
 
 
   return(
@@ -59,10 +65,8 @@ function App() {
       <div className="contenedor">
         <h1>¿A quien quieres retirar?</h1>
         <h2>indica con un tic a quien queres retirar. Aquellos espacios que quedan en blanco no estaran disponibles para el retiro</h2>
-        {/* <p>{data}</p> */}
+        {<p>{data}</p>}
         <form>
-            <input type="checkbox" />
-            <input type="checkbox" />
             <input type="checkbox" />
             <input type="button" className="logearse" value="Solicitar dársena"/>
         </form>
