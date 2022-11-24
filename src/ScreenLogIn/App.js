@@ -28,7 +28,7 @@ function App() {
     let token = "token=" + id;
     console.log(token);
 
-    const response = await fetch("http://localhost:5001/estacionamiento/ordenar", {
+    const response = await fetch("http://localhost:5001/estacionamiento/ordenar?LoggedId="+id, {
       method: "GET",
       mode: "cors",
       credentials: "include",

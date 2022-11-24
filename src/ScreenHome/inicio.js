@@ -22,14 +22,14 @@ function Login() {
       }) ,method: 'POST',
     }) 
     .then(response => response.json()).then(result => {
-      document.cookie = "LoggedId=" +result.message
+      document.cookie = "token=" + result.data.idpadres
+      console.log(result)
+      if (result.message == "Success") {
+        window.location.href = "/";
+      }
     })
     .then((data) => {
-     /* if (data.message =="Success") {
-        window.location.href = "/";
-
-      }
-      */
+     
     })
   }
 
