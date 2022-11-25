@@ -13,7 +13,8 @@ function Login() {
 
   const postData = () => {
     fetch ("http://localhost:5001/authpadre/login",{
-      headers: {
+    credentials: "include",  
+    headers: {
         'Content-Type': 'application/json'
       }, 
       body: JSON.stringify ({
@@ -22,7 +23,7 @@ function Login() {
       }) ,method: 'POST',
     }) 
     .then(response => response.json()).then(result => {
-      document.cookie = "token=" + result.data.idpadres
+      // document.cookie = "token=" + result.data.idpadres
       console.log(result)
       if (result.message == "Success") {
         window.location.href = "/";
