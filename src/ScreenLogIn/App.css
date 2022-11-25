@@ -76,3 +76,8 @@ html, body {
     height: 40px;
     margin-top: 40px;
 }
+
+.contenedor label {
+  padding-right: 9rem;
+  left: 2rem;
+}
